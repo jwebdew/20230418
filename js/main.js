@@ -3,7 +3,7 @@ window.onload = function(){
         /* spaceBetween: 30,
         centeredSlides: true, */
         autoplay: {
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
         },
         pagination: {
@@ -16,6 +16,27 @@ window.onload = function(){
         },
     }); //swiper main_visual
 
+
+    let play = document.getElementsByClassName('swiper-play')[0];
+    let stop = document.getElementsByClassName('swiper-stop')[0];
+    play.style.display = 'none'
+    play.onclick = function(){
+        swiper.autoplay.start();
+
+        if(stop.style.display == 'none') {
+            stop.style.display = 'block'
+            play.style.display = 'none'
+        }
+    }
+   
+    stop.onclick = function(){
+        swiper.autoplay.stop();
+        if(play.style.display == 'none') {
+            play.style.display = 'block'
+            stop.style.display = 'none'
+        }
+    }
+    
 
     let hd = document.getElementsByTagName('header')[0];
     let business = document.getElementsByClassName('business')[0]
