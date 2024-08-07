@@ -11,7 +11,10 @@ body {
     font-weight: 400;
 }
 #wrap {
-    margin: 0 auto; 
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: #ebebeb; */
     position: relative;
 }
 #wrap .inner {
@@ -27,7 +30,7 @@ header {
     top: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.5);
-    z-index: 10;
+    z-index: 9;
 }
 header.on {
     backdrop-filter: blur(5px);
@@ -72,10 +75,6 @@ header .inner nav .gnb .depth01 .depth02 li a {}
 /* main_visual */
 .main_visual {
     height: 100vh;
-   /*  position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; */
 }
 .main_visual img {
     width: 100%;
@@ -97,66 +96,9 @@ header .inner nav .gnb .depth01 .depth02 li a {}
 .main_visual .swiper-slide .inner h2 {
     font-weight: bold;
 }
-.main_visual .swiper_control {
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: -5px;
-    color: #fff;
-    z-index: 99;
-    display: flex;    
-    margin-left: 50px;
-}
-.main_visual .swiper_control div.swiper-play {
-    display: none;
-}
-.main_visual .swiper_control div {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
-.swiper-button-next, .swiper-button-prev {
-    width: 40px;
-    height: 40px;
-}
-.main_visual .swiper_control div img {
-    width: 20px;
-}
-.swiper-button-prev:after, 
-.swiper-rtl .swiper-button-next:after {
-    content: '';
-    background-image: url('../img/right_icon.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 40px;
-    height: 40px;
-    transform: rotate(-180deg);
-}
-.swiper-button-next:after, 
-.swiper-rtl .swiper-button-prev:after {
-    content: '';
-    background-image: url('../img/right_icon.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 40px;
-    height: 40px;
-}
-
-.swiper-pagination-bullet {
-    background: rgba(255, 255, 255);
-}
-.swiper-pagination-bullet-active {
-    background-color: #fff;
-}
-
-main {
-     
-}
 .business {
-    padding: 100px 0; 
+    margin: 100px 0;
 }
 .business .title {
     opacity: 0;
